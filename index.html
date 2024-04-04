@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Technical Documentation</title>
+    <link rel="stylesheet" href="./index.css" />
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>Technical Documentation</header>
+      <ul>
+        <li><a class="nav-link" href="#HTML_and_CSS">HTML and CSS</a></li>
+        <li>
+          <a class="nav-link" href="#JavaScript_and_Java"
+            >JavaScript and Java</a
+          >
+        </li>
+        <li><a class="nav-link" href="#Python_and_Ruby">Python and Ruby</a></li>
+        <li><a class="nav-link" href="#Git_and_Github">Git and Github</a></li>
+        <li>
+          <a class="nav-link" href="#Responsive_Design">Responsive Design</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main id="main-doc">
+      <section id="HTML_and_CSS" class="main-section">
+        <header>HTML and CSS</header>
+        <p>This section covers HTML and CSS basics.</p>
+        <p>
+          HTML is used for structuring content on the web, while CSS is used for
+          styling that content.
+        </p>
+        <p>Here's a code example:</p>
+        <code
+          >&lt;div class="container"&gt; &lt;p&gt;This is a paragraph&lt;/p&gt;
+          &lt;/div&gt;</code
+        >
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+        </ul>
+      </section>
+
+      <section id="JavaScript_and_Java" class="main-section">
+        <header>JavaScript and Java</header>
+        <p>This section covers JavaScript and Java basics.</p>
+        <p>
+          JavaScript is a scripting language used for web development, while
+          Java is a general-purpose programming language.
+        </p>
+        <p>Here's a code example:</p>
+        <code>console.log("Hello, world!");</code>
+        <ul>
+          <li>JavaScript</li>
+          <li>Java</li>
+        </ul>
+      </section>
+
+      <section id="Python_and_Ruby" class="main-section">
+        <header>Python and Ruby</header>
+        <p>This section covers Python and Ruby basics.</p>
+        <p>
+          Python is known for its simplicity and readability, while Ruby is
+          known for its elegant syntax.
+        </p>
+        <p>Here's a code example:</p>
+        <code>puts "Hello, world!"</code>
+        <ul>
+          <li>Python</li>
+          <li>Ruby</li>
+        </ul>
+      </section>
+
+      <section id="Git_and_Github" class="main-section">
+        <header>Git and Github</header>
+        <p>This section covers Git and Github basics.</p>
+        <p>
+          Git is a distributed version control system, while Github is a
+          platform for hosting Git repositories.
+        </p>
+        <p>Here's a code example:</p>
+        <code>git commit -m "Add new feature"</code>
+        <ul>
+          <li>Git</li>
+          <li>Github</li>
+        </ul>
+      </section>
+
+      <section id="Responsive_Design" class="main-section">
+        <header>Responsive Design</header>
+        <p>This section covers responsive design basics.</p>
+        <p>
+          Responsive design ensures that web pages look good on all devices,
+          regardless of screen size.
+        </p>
+        <p>Here's a code example:</p>
+        <code
+          >@media screen and (max-width: 600px) { body { background-color:
+          lightblue; } }</code
+        >
+        <ul>
+          <li>Responsive Design</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="./index.js">
+      const navLinks = document.querySelectorAll(".nav-link");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", (e) => {
+          e.preventDefault();
+          const targetId = link.getAttribute("href").substring(1);
+          const targetSection = document.getElementById(targetId);
+          targetSection.scrollIntoView({ behavior: "smooth" });
+        });
+      });
+    </script>
+  </body>
+</html>
